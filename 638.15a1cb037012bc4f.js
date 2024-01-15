@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkAgentReal=self.webpackChunkAgentReal||[]).push([[638],{2638:(C,u,d)=>{d.d(u,{SJ:()=>m});var h=d(2236),p=d(9808),c=d(5e3),_=d(508);d(1777);let m=(()=>{class n{}return n.\u0275fac=function(e){return new(e||n)},n.\u0275mod=c.oAB({type:n}),n.\u0275inj=c.cJS({imports:[[p.ez,_.BQ,h.ZD],h.ZD,_.BQ]}),n})()}}]);
