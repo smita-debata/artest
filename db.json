@@ -1,0 +1,60 @@
+{
+  "signup": [
+    {
+      "fullname": "kumar",
+      "email": "kumar@gmail.com",
+      "role": "Tenant",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "fullname": "ravi",
+      "email": "ravi@gmail.com",
+      "role": "Landlord",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "fullname": "Deepan",
+      "email": "deepan@gmail.com",
+      "role": "Landlord",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "fullname": "hemant",
+      "id": 4
+    },
+    {
+      "fullname": "smita",
+      "email": "smita@gmail.com",
+      "role": "Landlord",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "fullname": "jani",
+      "email": "jani@gmail.com",
+      "role": "Landlord",
+      "password": "1234",
+      "id": 6
+    },
+    {
+      "fullname": "subham",
+      "email": "subha@gmail.com",
+      "rolebase": "Tenant",
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "fullname": "smita",
+      "email": "smita@gmail.com",
+      "rolebase": "Landlord",
+      "password": "1234",
+      "id": 8
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

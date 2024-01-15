@@ -1,0 +1,144 @@
+<div class="main-container">
+    <div class="min-container">
+        <div class="name-content">
+            <h3><b>Hello Jane,</b></h3>
+            <span style="margin-top: -15px;">This is what we've got for you today</span>
+        </div>
+        <div class="drop-contents">
+            <div>
+                <p-dropdown [options]="propertylist" [(ngModel)]="property" optionLabel="name"></p-dropdown>
+            </div>
+            <div>
+                <p-dropdown [options]="portpoliolist" [(ngModel)]="portpolio" optionLabel="name"></p-dropdown>
+            </div>
+            <div>
+                <p-button label="Filter" icon=" pi pi-sort-alt" iconPos="right"></p-button>
+            </div>
+            <div>
+                <p-button type="button" label="Customise" styleClass="customise"></p-button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main-cards">
+        <div class="card1">
+            <div class="card" style="width: 350px;height: 150px;">
+                <div class="card-body">
+                    <div>
+                        <h4 style="color: #00264d; color: #00264d;"><b>Rent Received</b></h4>
+                    </div>
+
+                    <div class="doller-icons">
+                        <div class="icon" style="background-color: #e6e6ff;color: #00264d;">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+
+                        <h4>
+                            <b>$6,876.00</b>
+                        </h4>
+
+                    </div>
+
+                    <div class="progress mt-3">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card" style="width: 220px;height: 150px;">
+                <div class="card-body">
+                    <div>
+                        <h4 style="color: #00264d;"><b>Unpaid Expenses</b></h4>
+                    </div>
+
+                    <div class="doller-icons">
+                        <div class="icon" style="background-color: #ffe6e6;color: red;">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+
+                        <h4>
+                            <b>$140.87</b>
+                        </h4>
+
+                    </div>
+
+                    <div class="mt-2 mx-2" style="opacity: 0.5;">
+                        <h4>
+                            2 unpaid
+                        </h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="card3">
+            <div class="card" style="width: 220px;height: 150px;">
+                <div class="card-body">
+                    <div>
+                        <h4 style="color: #00264d;"><b>Overdue rent</b></h4>
+                    </div>
+
+                    <div class="doller-icons">
+                        <div class="icon" style="background-color:  #fff0e6;color: orange;">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+
+                        <h4>
+                            <b>$2,300.00</b>
+                        </h4>
+
+                    </div>
+
+                    <div class="mt-2 mx-2" style="opacity: 0.5;">
+                        <h4>
+                            5 overdue
+                        </h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="card4">
+
+            <div class="card" style="width: 220px;height: 150px;">
+                <div class="card-body">
+                    <div>
+                        <h4 style="color: #00264d;"><b>Upcoming expenses</b></h4>
+                    </div>
+
+                    <div class="doller-icons">
+                        <div class="icon" style="background-color: #ecf9ec;color: green;">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+
+                        <h4>
+                            <b>$2,300.00</b>
+                        </h4>
+
+                    </div>
+
+                    <div class="mt-2 mx-2" style="opacity: 0.5;">
+                        <h4>
+                            2 this month
+                        </h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="graph-content">
+
+    </div>
+
+
+
+
+</div>

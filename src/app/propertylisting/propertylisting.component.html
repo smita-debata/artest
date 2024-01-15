@@ -1,0 +1,169 @@
+<div class="container">
+
+    <mat-horizontal-stepper [linear]="isLinear" labelPosition="bottom" #stepper>
+        <ng-template matStepperIcon="edit" color="primary">
+            <mat-icon>done</mat-icon>
+        </ng-template>
+        <mat-step label="Property Info">
+            <div class="card" style="margin-top: 20px;padding: 20px;">
+                <h3>The Basics*</h3>
+                <form class="main-container">
+                    <mat-form-field class="Property-Type">
+                        <mat-label>Property Type</mat-label>
+                        <mat-select>
+                            <mat-option value="option1">Option 1</mat-option>
+                            <mat-option value="option2">Option 2</mat-option>
+                            <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="Address">
+                        <mat-label>Address</mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                    <div class="d-flex gap-5 flex-wrap">
+                        <mat-form-field class="unitsall">
+                            <mat-label>Unit # (optional)</mat-label>
+                            <input matInput type="text">
+                        </mat-form-field>
+                        <mat-form-field class="unitsall">
+                            <mat-label># of Bedrooms</mat-label>
+                            <mat-select>
+                                <mat-option value="option1">Option 1</mat-option>
+                                <mat-option value="option2">Option 2</mat-option>
+                                <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field class="unitsall">
+                            <mat-label># of Bathrooms</mat-label>
+                            <mat-select>
+                                <mat-option value="option1">Option 1</mat-option>
+                                <mat-option value="option2">Option 2</mat-option>
+                                <mat-option value="option3">Option 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="d-flex gap-5 flex-wrap">
+                        <mat-form-field class="unitsall">
+                            <mat-label>Rent</mat-label>
+                            <input matInput type="text">
+                        </mat-form-field>
+                        <mat-form-field class="unitsall">
+                            <mat-label>Deposit</mat-label>
+                            <input matInput type="text">
+                        </mat-form-field>
+                        <mat-form-field class="unitsall">
+                            <mat-label>Squre Footage</mat-label>
+                            <input matInput type="text">
+                        </mat-form-field>
+                    </div>
+                    <div style="width: 100%;display: flex;flex-direction: column;">
+                        <mat-form-field>
+                            <mat-label>Describe your property. explain what makes it such a great place to
+                                live.</mat-label>
+                            <textarea matInput></textarea>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>Phone Number</mat-label>
+                            <input matInput type="number">
+                        </mat-form-field>
+                    </div>
+
+
+
+
+
+                </form>
+
+                <div>
+                    <button mat-button matStepperNext>Continue</button>
+                </div>
+            </div>
+        </mat-step>
+        <mat-step label="Listing Details">
+            <form>
+
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step label="Lease">
+            <form>
+
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step label="Media">
+            <form>
+
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step label="Amenities">
+            <div class="card" style="margin-top: 20px;padding: 20px;">
+                <h3>Which Amenities  does your property have? </h3>
+                <h4>Share which amenities are available at your property</h4>
+            <form>
+                    <h5 style="font-weight: bold;">General Amenities</h5>
+                     <section class="d-flex gap-3">
+                        <div *ngFor="let option of genAmenityOptions">
+                            <mat-checkbox class="example-margin" >{{ option.name}}</mat-checkbox>
+                            <!-- <mat-checkbox class="example-margin" [(ngModel)]="indeterminate" [ngModelOptions]="{standalone: true}">Indeterminate</mat-checkbox> -->
+                        </div>    
+                    </section>
+                        <h5 style="font-weight: bold;">Cooling</h5>
+                        <div *ngFor="let option of coolingOptions">
+                            <mat-checkbox class="example-margin" >{{ option.name}}</mat-checkbox>
+                        </div> 
+                        <h5 style="font-weight: bold;">Parking</h5>
+                        <div *ngFor="let option of parkingOptions">
+                            <mat-checkbox class="example-margin">{{ option.name}}</mat-checkbox>
+                        </div>
+                        <h5 style="font-weight: bold;">Heating</h5>
+                        <div *ngFor="let option of heatingOptions">
+                            <mat-checkbox class="example-margin">{{ option.name}}</mat-checkbox>
+                        </div>  
+                    <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+           </div> 
+        </mat-step>
+        <mat-step label="Final Details">
+            <form>
+
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step label="Review">
+            <form>
+
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step label="Publish">
+            <form>
+
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                </div>
+            </form>
+        </mat-step>
+    </mat-horizontal-stepper>
+
+</div>

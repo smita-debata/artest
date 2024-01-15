@@ -1,0 +1,52 @@
+<div class="form-container">
+    <form [formGroup]="Signup" (ngSubmit)="signup()">
+        <div>
+            <mat-form-field class="pass">
+                <input matInput type="text" id="FullName" placeholder="Full Name" formControlName="fullname" required>
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="pass">
+                <mat-label>Role</mat-label>
+                <mat-select formControlName="rolebase">
+                    <mat-option *ngFor="let role of roles" [value]="role">{{ role
+                        }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="pass">
+                <input matInput type="text" id="Email" placeholder="Email" formControlName="email" required>
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="pass">
+                <input matInput placeholder="Password" autocomplete="current-password" formControlName="password"
+                    [type]="hide ? 'password' : 'text'" required>
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' :
+                    'visibility'}}</mat-icon>
+            </mat-form-field>
+        </div>
+        <div class="mb-2">
+            <button class="btn btn-dark w-100" [disabled]="!Signup.valid">Sign Up</button>
+        </div>
+        <div class="mb-3">
+            <label class="mx-2">Have An Account ?</label>
+            <label class="form-check-label " style="color: blue;" routerLinkActive="router-link-active">Login</label>
+        </div>
+    </form>
+</div>
+<hr>
+<div class="login-icons">
+    <div class="icon">
+        <i class="fa-brands fa-google"></i>
+    </div>
+    <div class="icon">
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+    <div class="icon">
+        <i class="fa-brands fa-facebook-f"></i>
+    </div>
+</div>

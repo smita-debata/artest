@@ -1,0 +1,19 @@
+<div style="display:inline-block;margin-left:350px;margin-top: 5px;">
+    <label>Route filter</label>
+    <i class="fa fa-eraser" aria-hidden="true" style="zoom:1.1;cursor:pointer;color:orange;padding: 0 5px 0 5px;"
+        title="Clear route filter"></i>
+    <input type="password" style="width: 0;height: 0; visibility: hidden;position:absolute;left:0;top:0;">
+    <input id="rtFilter" autocomplete="off"
+        style="text-align:center;font-weight:bold; height:1.5em;border:1px solid #333;border-radius:4px;width:3.5em;padding:3px;"
+        [(ngModel)]="selectedRoute">
+    <i class="fas fa-sync-alt" aria-hidden="true" style="zoom:1.1;cursor:pointer;color:orange;padding: 0 5px 0 5px;"
+        title="Load meters in this route" (click)="applyfilter(selectedRoute)"></i>
+</div>
+
+<div class="map" style="float:left;width:100%;padding:0px;margin:0px;">
+    <div style="width: 100%; height: 500px;">
+        <google-map width="100%" height="100%" [options]="mapOptions" (mapInitialized)="handleMapInitialized($event)">
+
+        </google-map>
+    </div>
+</div>

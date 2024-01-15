@@ -1,0 +1,21 @@
+#dropdownMenu2 {
+    width: 100%;
+    background: whitesmoke;
+    color: #000;
+}
+
+.dropdown-menu {
+    width: 90%;
+    margin: 5px;
+    padding: 10px 30px;
+}
+
+.input-group {
+    width: 95%;
+    margin: 30px 8px;
+
+}
+
+.form-control {
+    width: 50%;
+}

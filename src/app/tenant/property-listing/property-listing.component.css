@@ -1,0 +1,35 @@
+.card {
+    width: 300px;
+    height: 440px;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 8px 0 rgb(53, 54, 48), 0 6px 20px 0 rgba(230, 235, 220, 0.19); */
+}
+
+.card-img {
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    gap: 10px;
+}
+
+.allicons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.main-container {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}

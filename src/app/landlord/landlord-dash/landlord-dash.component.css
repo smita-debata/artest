@@ -1,0 +1,124 @@
+.main-container {
+    overflow-y: hidden;
+    /* Hide vertical scrollbar */
+    overflow-x: hidden;
+}
+
+.side-nav-container {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 60px;
+    margin-top: 71px;
+    height: calc(94vh - 0rem);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 5);
+    background-color: rgba(34, 34, 34, 1);
+    border-top: 1px solid rgb(110, 108, 108);
+    overflow-x: hidden;
+    white-space: nowrap;
+    transition: width 0.2s ease;
+    overflow: hidden;
+}
+
+.bordrer-white {
+    border: 1px solid white;
+}
+
+.side-nav-content {
+    color: white;
+    width: 230px;
+    margin: 10px 10px 0px 10px;
+}
+
+.nav-list {
+    list-style: none;
+    height: 100%;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.nav-list-item {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.nav-list-open .nav-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.active-link {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.app-nav-list-open {
+    width: 250px;
+
+
+}
+
+.nav-list-item i {
+    font-size: 20px;
+    height: 25px;
+    width: 25px;
+    margin: 0px 15px 0px 10px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.nav-list-item span {
+    width: 120px;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.display-area {
+    position: absolute;
+    margin-top: 71px;
+    left: 60px;
+    width: calc(100% - 60px);
+    transition: left 0.2s ease;
+}
+
+.display-area-shrink {
+    left: 250px;
+    width: calc(100% - 250px);
+
+
+
+}
+
+.main-close-container {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.back-button i {
+    color: white;
+    font-size: 20px;
+    margin: 15px 15px 15px 20px;
+}
+
+.close-icon {
+    color: white;
+    font-size: 20px;
+    margin: 15px 0px 15px 150px;
+}
+
+.close-icon:hover {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.disabled-icon {
+    display: none;
+}

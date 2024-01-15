@@ -1,0 +1,328 @@
+<div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="1000">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../../assets/ag1.jpg" class="d-block w-100" alt="..." height="640" width="400">
+        </div>
+        <div class="carousel-item">
+            <img src="../../assets/ag2.jpg" class="d-block w-100" alt="..." height="640" width="300">
+        </div>
+        <div class="carousel-item">
+            <img src="../../assets/ag3.jpg" class="d-block w-100" alt="..." height="640" width="300">
+        </div>
+    </div>
+</div>
+
+<div class="mid-container">
+    <div class="nav-container">
+        <nav class="navbar navbar-expand-lg" style="color: white;">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <img src="../../assets/ag4.png" alt="Logo" width="45" height="30"
+                        class="d-inline-block align-text-top">AgentReal
+                </div>
+
+                <div class="d-flex gap-3 flex-wrap">
+                    <div class="nav-item">
+                        <a class="nav-link active" aria-current="page" [routerLink]="['/dashProp']"
+                            routerLinkActive="router-link-active" href="#">Home</a>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">Properties</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item ">Buy Property</a>
+                                <ul class="dropdown-menu dropdown-submenu mt-2" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item">Homes For Sell</a></li>
+                                    <li><a class="dropdown-item">Foreclosures</a></li>
+                                    <li><a class="dropdown-item">For Sell By Owner</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item">Sell Property</a>
+                                <ul class="dropdown-menu dropdown-submenu mt-2" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item">Explore Your Options</a></li>
+                                    <li><a class="dropdown-item">See your Home's Z Estimate</a></li>
+                                    <li><a class="dropdown-item">Home Values</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item">Rent Property</a>
+                                <ul class="dropdown-menu dropdown-submenu mt-2" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item">Rental Buildings</a></li>
+                                    <li><a class="dropdown-item">Apartments For Rent</a></li>
+                                    <li><a class="dropdown-item">Houses For Rent</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="search-container">
+        <h2 style="color: white; text-align: center;">
+            Find your dream home
+        </h2>
+        <div class="d-flex">
+            <form>
+                <div class="input-container" style=" width: 450px; border-radius: 25px;">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" class="form-control px-4" style="border-radius: 25px;"
+                        placeholder="Your ZIP code or City. e.g. New York" name="inputField" [(ngModel)]="inputValue"
+                        (keyup.Enter)="openModal()" (keyup.enter)="submitForm()">
+                    <button class="clear-button">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <button class="clear-button">
+                        <img src="../../assets/agsearch.png" alt="" style="width: 25px;height: 25px;">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 400px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Welcome to AgentReal</h2>
+                <button #myButton type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <mat-tab-group>
+                    <mat-tab label="Login"><app-login-page
+                            (submitEvent)="handleChildData($event)"></app-login-page></mat-tab>
+                    <mat-tab label="SignUp"><app-signup-page
+                            (submitEvent)="handleChildData($event)"></app-signup-page></mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- search property list  -->
+
+<div class="modal fade bd-search-modal-lg" id="searchModal" tabindex="-1" role="dialog"
+    aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="max-height: 500px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Select Property Details</h2>
+            </div>
+            <div class="modal-body">
+
+                <mat-tab-group>
+                    <div>
+                        <mat-tab label="Rent">
+                            <div>
+                                <label for="customRange1" class="form-label">
+                                    <h3>Price range</h3>
+                                </label>
+                                <input type="range" class="form-range" id="customRange1">
+                            </div>
+
+                            <div>
+                                <h3>Beds and Baths</h3>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Bedrooms and Bathrooms
+                                    </button>
+                                    <ul class="dropdown-menu dropdown2menu" aria-labelledby="dropdownMenu2">
+                                        <li>
+                                            <h4> Number of Bedrooms </h4>
+                                            <button class="dropdown-item" type="button">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio3" value="option3"
+                                                        disabled>
+                                                    <label class="form-check-label" for="inlineRadio3">3
+                                                        (disabled)</label>
+                                                </div>
+
+                                            </button>
+                                        </li>
+                                        <h4>Number of Bathrooms</h4>
+                                        <li><button class="dropdown-item" type="button">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio3" value="option3"
+                                                        disabled>
+                                                    <label class="form-check-label" for="inlineRadio3">3
+                                                        (disabled)</label>
+                                                </div>
+                                            </button></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- houses types -->
+                            <div>
+                                <h3>Types of Houses</h3>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        House Types
+                                    </button>
+                                    <div class="dropdown-menu dropdown2menu" aria-labelledby="dropdownMenu2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Houses
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Apartments/Condos
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Townhomes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Lots/Land
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Apartments
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Manufactured
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More filters -->
+                            <div class="form-details">
+                                <h3>More Filters</h3>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        More Filters
+                                    </button>
+                                    <div class="dropdown-menu dropdown2menu" aria-labelledby="dropdownMenu2">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Move in Date</span>
+                                            <input type="date" aria-label="First name" class="form-control">
+
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-text">Square Feet &nbsp;</span>
+                                            <input type="number" aria-label="First name" class="form-control">
+
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-text"> Lot Size &nbsp; &nbsp; &nbsp; &nbsp; </span>
+                                            <input type="number" aria-label="First name" class="form-control">
+
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-text">Year Built In</span>
+                                            <input type="date" aria-label="First name" class="form-control">
+
+                                        </div>
+                                        <div class="form-check" style="margin: 10px;">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Basement
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check" style="margin: 10px;">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Single-story only
+                                            </label>
+                                        </div>
+                                        <div class="form-check" style="margin: 10px;">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Must have AC
+                                            </label>
+                                        </div>
+                                        <div class="form-check" style="margin: 10px;">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Must have Pool
+                                            </label>
+                                        </div>
+                                        <div class="form-check" style="margin: 10px;">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Waterfront
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" style="width: 50%; margin: 10px 0px;"
+                                class="btn btn-primary btn-lg">Apply</button>
+                            <button (click)="closeModal()" type="button" style="width: 50%; margin: 10px 0px;"
+                                class="btn btn-danger btn-lg">Close</button>
+                        </mat-tab>
+                    </div>
+                    <mat-tab label="Lease"> Content 2 </mat-tab>
+                    <mat-tab label="Buy"> Content 3 </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

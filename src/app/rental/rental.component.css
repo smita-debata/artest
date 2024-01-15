@@ -1,0 +1,219 @@
+.main-container {
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    padding: 10px;
+    color: #00264d;
+    background-color: rgb(222, 238, 243);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.min-container {
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.name-content {
+    padding: 10px;
+    max-width: 100%;
+    width: 500px;
+    height: 500px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: #00264d;
+    flex: 1 1 200px;
+
+}
+
+.drop-contents {
+    padding: 10px;
+    width: fit-content;
+    height: 100px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+:host ::ng-deep.p-dropdown {
+    max-width: 100%;
+    width: 200px;
+    background-color: rgb(196, 231, 241);
+    border: hidden;
+
+
+}
+
+
+:host ::ng-deep.p-dropdown .p-dropdown-trigger .p-dropdown-trigger-icon {
+    color: #00264d;
+    opacity: 0.6;
+}
+
+:host ::ng-deep.p-dropdown-label {
+    color: #00264d;
+    font-size: 16px;
+    font-weight: bolder;
+    opacity: 0.6;
+}
+
+:host ::ng-deep.p-dropdown .p-dropdown-item {
+    cursor: pointer;
+    color: #00264d;
+}
+
+:host ::ng-deep.p-dropdown .p-dropdown-item.p-highlight {
+    background-color: #00264d;
+    color: #fff;
+}
+
+:host ::ng-deep.p-button {
+    max-width: 100%;
+    border: hidden;
+    width: 100px;
+    background-color: rgb(196, 231, 241);
+    color: #00264d;
+    opacity: 0.6;
+
+}
+
+:host ::ng-deep.p-button:hover {
+    width: 100px;
+    background-color: rgb(196, 231, 241);
+    color: #00264d;
+
+}
+
+:host ::ng-deep.p-button.customise {
+    max-width: 100%;
+    width: 220px;
+    border: 1px solid #00264d;
+}
+
+.main-cards {
+    margin-top: -30px;
+    width: 1400px;
+    max-width: 100%;
+    height: 200px;
+    gap: 10px;
+    max-height: 100%;
+    color: #00264d;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+
+}
+
+.card1 {
+    flex: 1 1 100px;
+}
+
+.icon-content {
+    justify-items: baseline;
+}
+
+.doller-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    font-weight: bolder;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph-container {
+    margin-top: -20px;
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.graph-content {
+    font-weight: bolder;
+    color: #00264d;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+
+}
+
+:host ::ng-deep.p-button.income {
+    max-width: 100%;
+    width: 130px;
+}
+
+.form-check-input:checked {
+    background-color: #00264d;
+    border: hidden;
+}
+
+.tenant-request {
+    font-weight: bolder;
+    color: #00264d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.tenant-content {
+    color: #00264d;
+
+}
+
+.work-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.work-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-icon-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    gap: 20px;
+}
+
+.PropertyOverview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
+}

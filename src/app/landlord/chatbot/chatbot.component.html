@@ -1,0 +1,27 @@
+<div class="chat-icon" #chatIcon (click)="toggleChat()">
+    <i class="fa-solid fa-robot"></i>
+</div>
+<div class="chatbot-card" #chatWindow [style.right.px]="rightOffset" (mousedown)="onMouseDown($event)">
+    <div class="card">
+        <div class="card-header">
+            <h3>AI-Chat-Bot</h3>
+            <div class=" d-flex gap-3 fs-6">
+                <i class="fa-solid fa-arrow-up" (click)="expandContainer()"></i>
+                <i class="fa-solid fa-arrow-down" (click)="resetContainer()"></i>
+                <i class="fa-solid fa-xmark" (click)="toggleChat()"></i>
+            </div>
+        </div>
+        <div [style.height.px]="containerHeight">
+
+        </div>
+        <div class="card-body">
+            <div>
+                <input class="form-control" type="text" placeholder="Chat Something....." [(ngModel)]="text"
+                    style="width:440px;">
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-paper-plane" (click)="clear()"></i>
+            </div>
+        </div>
+    </div>
+</div>

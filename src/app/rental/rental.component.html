@@ -1,0 +1,324 @@
+<div class="main-container">
+    <div class="min-container">
+        <div class="name-content">
+            <h3 style="font-weight: bolder;">Hello Jane,</h3>
+            <span style="margin-top: -15px;">This is what we've got for you today</span>
+        </div>
+        <div class="drop-contents">
+            <div>
+                <p-dropdown [options]="propertylist" [(ngModel)]="property" optionLabel="name"></p-dropdown>
+            </div>
+            <div>
+                <p-dropdown [options]="portpoliolist" [(ngModel)]="portpolio" optionLabel="name"></p-dropdown>
+            </div>
+            <div>
+                <p-button label="Filter" icon=" pi pi-sort-alt" iconPos="right"></p-button>
+            </div>
+            <div>
+                <p-button type="button" label="Customise" styleClass="customise"></p-button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main-cards">
+        <div class="card1">
+            <div class="card" style="width: 410px;height: 150px;">
+                <div class="card-body">
+                    <div>
+                        <h4 style="color: #00264d; color: #00264d;font-weight: bolder;">Rent Received</h4>
+                    </div>
+
+                    <div class="doller-icons">
+                        <div class="icon" style="background-color: #e6f0ff;color: #00264d;">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+
+                        <h4>
+                            <b>$6,876.00</b>
+                        </h4>
+
+                    </div>
+
+                    <div class="progress mt-3">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card" style="width: 285px;height: 150px;">
+                <div class="card-body">
+                    <div>
+                        <h4 style="color: #00264d;font-weight: bolder;">Unpaid Expenses</h4>
+                    </div>
+
+                    <div class="doller-icons">
+                        <div class="icon" style="background-color: #ffe6e6;color: red;">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+
+                        <h4>
+                            <b>$140.87</b>
+                        </h4>
+
+                    </div>
+
+                    <div class="mt-2 mx-2" style="opacity: 0.5;color: #00264d;">
+                        <h4>
+                            2 unpaid
+                        </h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="card3">
+            <div class="card" style="width: 285px;height: 150px;">
+                <div class="card-body">
+                    <div>
+                        <h4 style="color: #00264d;font-weight: bolder;">Overdue rent</h4>
+                    </div>
+
+                    <div class="doller-icons">
+                        <div class="icon" style="background-color:  #fff0e6;color: orange;">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+
+                        <h4>
+                            <b>$2,300.00</b>
+                        </h4>
+
+                    </div>
+
+                    <div class="mt-2 mx-2" style="opacity: 0.5;color: #00264d;">
+                        <h4>
+                            5 overdue
+                        </h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="card4">
+
+            <div class="card" style="width: 285px;height: 150px;">
+                <div class="card-body">
+                    <div>
+                        <h4 style="color: #00264d;font-weight: bolder;">Upcoming expenses</h4>
+                    </div>
+
+                    <div class="doller-icons">
+                        <div class="icon" style="background-color: #ecf9ec;color: green;">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+
+                        <h4>
+                            <b>$2,300.00</b>
+                        </h4>
+
+                    </div>
+
+                    <div class="mt-2 mx-2" style="opacity: 0.5;color: #00264d;">
+                        <h4>
+                            2 this month
+                        </h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="graph-container">
+        <div class="card" style=' width: 900px;height: 300px;'>
+            <div class="card-body">
+                <div class="graph-content">
+                    <div>
+                        <h3 style="font-weight: bolder;margin-top: 10px;">CashFlow</h3>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div>
+                            <p-button label="Income" styleClass="income" icon=" pi pi-circle-fill"
+                                iconPos="left"></p-button>
+                        </div>
+                        <div>
+                            <p-button label="Expenses" styleClass="income" icon=" pi pi-circle"
+                                iconPos="left"></p-button>
+                        </div>
+                    </div>
+                    <div>
+                        <p-dropdown [options]="monthlyList" [(ngModel)]="monthlyExp" optionLabel="name"></p-dropdown>
+                    </div>
+                </div>
+                <div style="width:100%;height: 300px;padding:5px;margin-top: -40px;">
+                    <app-chartbar></app-chartbar>
+                </div>
+            </div>
+        </div>
+        <div class="card" style=" width: 500px;height: 300px;">
+            <div class="card-body">
+                <div class="tenant-request">
+                    <div>
+                        <h4><b>Tenant request</b></h4>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <div class="tenant-content">
+                    <div style="opacity: 0.5;margin-bottom: -8px;">
+                        <h4 style="font-size: 12px;">
+                            FRI 28 JAN 2022
+                        </h4>
+                    </div>
+                    <div class="work-icons mb-2">
+                        <div class="work-icon-content">
+                            <div class="work-icon" style="background-color: #e6e6ff;color: #00264d;">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+
+                            <div class="d-flex flex-column">
+                                <h4>277West 11th street #2c</h4>
+                                <span style="margin-top: -18px;">Broken Window</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p-tag styleClass="p-mr-2" severity="warning" value="IN PROGRESS..."
+                                [rounded]="true"></p-tag>
+                        </div>
+
+                    </div>
+                    <div class="work-icons">
+                        <div class="work-icon-content">
+                            <div class="work-icon" style="background-color: #e6e6ff;color: #00264d;">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+
+                            <div class="d-flex flex-column">
+                                <h4>277West 11th street #2c</h4>
+                                <span style="margin-top: -18px;">Lock Broken</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p-tag styleClass="p-mr-2" severity="warning" value="IN PROGRESS..."
+                                [rounded]="true"></p-tag>
+                        </div>
+
+                    </div>
+                    <!-- //-------------------------------------------------------- -->
+                    <div class="bottom-work-content mt-3">
+                        <div style="opacity: 0.5;margin-bottom: -8px;">
+                            <h4 style="font-size: 12px;">
+                                WED 26 JAN 2022
+                            </h4>
+                        </div>
+                        <div class="work-icons">
+                            <div class="work-icon-content">
+                                <div class="work-icon" style="background-color: #e6e6ff;color: #00264d;">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                </div>
+
+                                <div class="d-flex flex-column">
+                                    <h4>123 jonhdon Drive</h4>
+                                    <span style="margin-top: -18px;">Diswasher Leak</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p-tag styleClass="p-mr-2" severity="danger" value="OVERDUE..."
+                                    [rounded]="true"></p-tag>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="PropertyOverview">
+        <div class="card" style="width: 350px;height:fit-content;">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h4 style="color: #00264d;font-weight: bolder;">Property Overview</h4>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <div style="width: 450px;height:150px;margin-top: -20px;">
+                    <app-propertychart></app-propertychart>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 279px;height:fit-content;">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h4 style="color: #00264d;font-weight: bolder;">Occupancy rate</h4>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <div style="width:200px;height:140px;margin-top: -10px;margin-left: 40px;">
+                    <circle-progress [percent]="85" [animation]="true" [animateTitle]="true" [maxPercent]='1000'
+                        [radius]="60" [outerStrokeWidth]="13" [showInnerStroke]="true" [innerStrokeWidth]="0"
+                        [outerStrokeColor]="'#00b359'" [showTitle]="true" [subtitle]="'Occupied'">
+                    </circle-progress>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width:660px;height:fit-content;">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h4 style="color: #00264d;font-weight: bolder;">Net worth/Portfolio</h4>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <div class="d-flex flex-row gap-3 align-items-center text-center justify-content-center"
+                    style="margin-top: -12px;">
+                    <div class="d-flex flex-column ">
+                        <h3 style="color:#00b359;font-weight: bolder;">$25,2000.00</h3>
+                        <span style="margin-top: -18px;">Net gain</span>
+                    </div>
+                    <div class="d-flex gap-2 justify-content-baseline" style="color:#00b359">
+                        <span> <i class="fa-solid fa-caret-up fs-3"></i></span>
+                        <span>22.2%</span>
+                    </div>
+                </div>
+                <div class="network-progress">
+                    <div>
+                        <h4>
+                            Current valuation: <span style="font-weight:bolder;">$2,460.000.00</span>
+                        </h4>
+                        <div class="progress mb-1" style="margin-top: -10px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;"
+                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>
+                            Current valuation: <span style="font-weight: bolder;">$1,200.000.00</span>
+                        </h4>
+                        <div class="progress" style="margin-top: -10px;">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 50%;"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

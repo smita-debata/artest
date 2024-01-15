@@ -1,0 +1,213 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PropertyModal">Large
+    modal</button>
+
+
+
+<div class="modal fade" id="PropertyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="max-height: 500px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Select Property Details</h2>
+            </div>
+            <div class="modal-body">
+
+                <mat-tab-group>
+                    <div>
+                        <mat-tab label="Rent">
+                            <div>
+                                <label for="customRange1" class="form-label">
+                                    <h3>Price range</h3>
+                                </label>
+                                <input type="range" class="form-range" id="customRange1">
+                            </div>
+
+                            <div>
+                                <h3>Beds and Baths</h3>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenu2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Bedrooms and Bathrooms
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <li>
+                                            <h4> Number of Bedrooms </h4>
+                                            <button class="dropdown-item" type="button">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio3" value="option3"
+                                                        disabled>
+                                                    <label class="form-check-label" for="inlineRadio3">3
+                                                        (disabled)</label>
+                                                </div>
+
+                                            </button>
+                                        </li>
+                                        <h4>Number of Bathrooms</h4>
+                                        <li><button class="dropdown-item" type="button">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio3" value="option3"
+                                                        disabled>
+                                                    <label class="form-check-label" for="inlineRadio3">3
+                                                        (disabled)</label>
+                                                </div>
+                                            </button></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- houses types -->
+                            <div>
+                                <h3>Types of Houses</h3>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        House Types
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Houses
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Apartments/Condos
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Townhomes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Lots/Land
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Apartments
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Manufactured
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More filters -->
+                            <div class="form-details">
+                                <h3>More Filters</h3>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        More Filters
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <div class="input-group">
+                                            <span class="input-group-text">Move in Date</span>
+                                            <input type="date" aria-label="First name" class="form-control">
+
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-text">Square Feet &nbsp;</span>
+                                            <input type="number" aria-label="First name" class="form-control">
+
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-text"> Lot Size &nbsp; &nbsp; &nbsp; &nbsp; </span>
+                                            <input type="number" aria-label="First name" class="form-control">
+
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-text">Year Built In</span>
+                                            <input type="date" aria-label="First name" class="form-control">
+
+                                        </div>
+                                        <div class="form-check" style="margin: 10px;">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Basement
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check" style="margin: 10px;">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Single-story only
+                                            </label>
+                                        </div>
+                                        <div class="form-check" style="margin: 10px;">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Must have AC
+                                            </label>
+                                        </div>
+                                        <div class="form-check" style="margin: 10px;">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Must have Pool
+                                            </label>
+                                        </div>
+                                        <div class="form-check" style="margin: 10px;">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Waterfront
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" style="width: 100%; margin: 10px 0px;"
+                                class="btn btn-primary btn-lg">Apply</button>
+
+                        </mat-tab>
+                    </div>
+                    <mat-tab label="Lease"> Content 2 </mat-tab>
+                    <mat-tab label="Buy"> Content 3 </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

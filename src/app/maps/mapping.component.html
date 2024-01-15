@@ -1,0 +1,30 @@
+<div class="filters" style="width:100%;float:right;padding:10px;margin:0px;">
+    <div style="float:left; margin-top: 10px;">
+        Meters Listed:  <span style="color: blue; font-weight: 600;">{{ metersListedCount }}</span>
+      </div>
+      <div style="display:inline-block;margin-left:350px;margin-top: 5px;">
+        <label>Route filter</label>
+        <i class="fa fa-eraser" aria-hidden="true" style="zoom:1.1;cursor:pointer;color:orange;padding: 0 5px 0 5px;" title="Clear route filter" (click)="clearRouteFilter()"></i>
+        <input type="password" style="width: 0;height: 0; visibility: hidden;position:absolute;left:0;top:0;">
+        <input id="rtFilter" autocomplete="off" style="text-align:center;font-weight:bold; height:1.5em;border:1px solid #333;border-radius:4px;width:3.5em;padding:3px;" [(ngModel)]="selectedRoute">
+        <i class="fas fa-sync-alt" aria-hidden="true" style="zoom:1.1;cursor:pointer;color:orange;padding: 0 5px 0 5px;" title="Load meters in this route" (click)="onRouteFilterChange(map?.googleMap!)"></i>
+    </div>
+    <span style="display:block;float: right;margin-right:20px;">
+       <img id="box24Hours" width="40" src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt="icon" title="Data received within the last 24 hours" (click)="LoadMapPoints('24','green',map?.googleMap!)"/>
+       <img id="box48Hours" width="40" src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt="icon" title="Data received within the last 48 hours" (click)="LoadMapPoints('48','blue',map?.googleMap!)"/>
+       <img id="boxWeek" width="40" src="http://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="icon" title="Data received within a week" (click)="LoadMapPoints('withinweek','orange',map?.googleMap!)"/>
+       <img id="boxMoreThanWeek" width="40" src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="icon" title="Data received more than a week" (click)="LoadMapPoints('morethanweek','red',map?.googleMap!)"/>
+      
+       <select class="form-select"  (change)="OnGateChange($event,map?.googleMap!)" id="selectGateway" style="float:left;padding:4px;border-radius:5px;width:250px;color:#999999;height:35px;">
+        <option selected value="clear">Show all gateway devices</option>
+      <option *ngFor="let gateway of gateways" [value]="gateway.uniqueId">{{ gateway.gatewayName }}</option>
+    </select>
+    </span>
+</div>
+<div class="map" style="float:left;width:100%;padding:0px;margin:0px;">
+<google-map height="90vh"
+            width="100%"
+            [options]="mapOptions" 
+            (mapInitialized)="handleMapInitialized($event)">
+</google-map>
+</div>

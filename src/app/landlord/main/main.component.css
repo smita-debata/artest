@@ -1,0 +1,22 @@
+* {
+    justify-content: center;
+
+}
+
+.pie-container {
+    width: 600px;
+    max-width: 100%;
+    height: 300px;
+    border: 2px solid rgb(248, 235, 235);
+    border-radius: 5%;
+}
+
+.main-container {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
